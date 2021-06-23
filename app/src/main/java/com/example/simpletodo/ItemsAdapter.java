@@ -17,14 +17,20 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
         void onItemLongClicked(int position);
     }
 
+    public interface OnClickListener {
+        void onItemClicked(int position);
+    }
+
     // Defines a member variable, items, that can be used in all the methods within this class
     List<String> items;
     OnLongClickListener longClickListener;
+    OnClickListener clickListener;
 
     // Sets member variable (defined above) to whatever is passed into this constructor
-    public ItemsAdapter(List<String> items, OnLongClickListener longClickListener) {
+    public ItemsAdapter(List<String> items, OnLongClickListener longClickListener, OnClickListener clickListener) {
         this.items = items;
         this.longClickListener = longClickListener;
+        this.clickListener = clickListener;
     }
 
     // onCreateViewHolder creates each view
@@ -71,6 +77,13 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
                     // Notify the listener which position was long pressed
                     longClickListener.onItemLongClicked(getAdapterPosition());
                     return true;
+                }
+            });
+            tvItem.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    // Notify the listener which position in the list was clicked
+                    clickListener.onItemClicked(getAdapterPosition());
                 }
             });
         }
