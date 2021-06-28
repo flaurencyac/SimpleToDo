@@ -16,7 +16,7 @@ The following **required** functionality is completed:
 
 The following **bonus** features are implemented:
 
-* [x] User can **tap a todo item in the list and bring up an edit screen for the todo item** and then have any changes to the text reflected back in the todo list
+* [ ] User can **tap a todo item in the list and bring up an edit screen for the todo item** and then have any changes to the text reflected back in the todo list
 
 The following **additional** features are implemented:
 
@@ -32,7 +32,7 @@ GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-A challenge that I had during the development of Simple ToDo was getting familiarized with the Android Studio interface and understanding the structure and inner workings of the Model View Controller. There were many concepts that I had run into before in my Object Oriented Programming class, like saving data to a file for persistence, using an adapter design pattern, widgets, and listeners, but actually getting to code them to this scale was eye-opening in that I got to understand how every class, method, interface, and widget worked together. Finally, more than anything, reviewing the UML diagram presented in the last module helped me visualize/internalize the app in its entirety, which really helped consolidate the concepts I learned from all the modules.
+Describe any challenges encountered while building the app.
 
 ## License
 
